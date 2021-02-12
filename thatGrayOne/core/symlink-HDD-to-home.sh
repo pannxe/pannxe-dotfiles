@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# Automatically symlink /media/pannxe/DATA/Home/* to ~
+
 DES_ROOT="/media/pannxe/DATA/Home"
 BAK_DIR="./home-backup"
 DIRS=("Documents" "Downloads" "Music" "Pictures" "Videos")
