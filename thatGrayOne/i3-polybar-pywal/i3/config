@@ -16,6 +16,7 @@
 # Font for window titles.
 font pango:Noto Sans Thai Regular 12
 font pango:Source Code Pro 12
+font pango:Mononoki Nerd Font Bold 12
 
 # set the mod key to the winkey:
 set $mod Mod4
@@ -38,13 +39,14 @@ workspace_layout default
 ##############################
 
 #border indicator on windows: 
-new_window pixel 2
+new_window pixel 3
 smart_borders on
+
 # thin borders
-hide_edge_borders none
+# hide_edge_borders none
 
 # Set inner/outer gaps
-gaps inner 4
+gaps inner 6
 gaps outer 0
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -265,27 +267,18 @@ for_window [class="Pamac-manager"] floating enable
 ######################################
  
 # Define colors variables: 
-set $blue		    #458588
-set $lightblue		#83a598
-set $urgentred		#cc242d
-set $white		    #ebdbb2
-set $black		    #282828
-set $purple		    #b16286
-set $darkgrey		#3c3836
-set $grey		    #928374
-set $mediumgrey		#7c6f64
-set $yellow	        #d79921
-set $green          #98971a
-set $aqua           #689d6a
-set $orange         #d65d0e
+set_from_resource $fg     i3wm.color7 #f0f0f0
+set_from_resource $bg     i3wm.color1 #f0f0f0
+set_from_resource $bguf   i3wm.color2 #f0f0f0
 
 # define colors for windows:
 # class		        	border		bground		text		indicator	child_border
-client.focused		    $aqua	    $aqua	    $white		$white		$aqua
-client.unfocused	    $aqua	    $aqua	    $white		$white		$darkgrey
-client.focused_inactive	$aqua	    $aqua	    $white		$white		$black
-client.urgent		    $urgentred	$urgentred	$white		$white		$orange
+client.focused		    $bg	         $bg	    $fg		    $bg		    $bg
+client.unfocused	    $bguf	     $bguf	    $fg		    $bguf		$bguf
+client.focused_inactive	$bguf        $bguf	    $fg		    $bguf		$bguf
+client.urgent		    $bg	         $bg	    $fg		    $bg		    $bg
 
+client.background       $bg
 
 #####################################
 # Application menu handled by rofi: #
